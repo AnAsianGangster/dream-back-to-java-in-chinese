@@ -203,7 +203,7 @@ JVM：栈内存、堆内存；
 - SingletonDemo singleton -->开辟栈内存空间，来放地址
 - new SingletonDemo() -->开辟堆内存空间
 
-![Threading05](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading05.svg)
+![Threading05](./picture/Threading05.svg)
 
 单线程模式下的单例模式
 
@@ -389,5 +389,5 @@ volatile关键字的作用可以使内存中的数据对线程可见。
 singletonDemo = new SingletonDemo();
 ```
 
-![Threading06](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading06.svg)
+![Threading06](./picture/Threading06.svg)
 

@@ -14,7 +14,7 @@ synchronized关键字来实现线程同步，让在访问同一个资源的多�
 
 double check、volatile
 
-![Threading07](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading07.svg)
+![Threading07](./picture/Threading07.svg)
 
 
 

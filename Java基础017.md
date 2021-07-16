@@ -512,7 +512,7 @@ Oject类中经常被子类重写的方法：
 
   包装类结构体系
 
-  ![包装类](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/包装类.svg)
+  ![包装类](./picture/包装类.svg)
 
   ### 装箱和拆箱
 

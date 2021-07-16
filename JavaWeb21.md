@@ -102,7 +102,7 @@ AJAX，动态更新页面中的局部内容，不影响用户的其他操作
 
 ## AJAX原理
 
-![javaweb01](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/javaweb01.svg)
+![javaweb01](/Users/anasiangangster/Desktop/Java培训/楠哥./picture//javaweb01.svg)
 
 ## 基于jQuery的AJAX语法
 
@@ -383,7 +383,7 @@ Java Database Connectivity是一个独立于特定数据库的管理系统，通
 
 定义了一组标准，为访问不同数据库提供了统一途径。
 
-![javaweb02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/javaweb02.svg)
+![javaweb02](/Users/anasiangangster/Desktop/Java培训/楠哥./picture//javaweb02.svg)
 
 ## JDBC体系结构
 
@@ -392,7 +392,7 @@ JDBC接口包括两个层面：
 - 面向应用的API，供程序员调用
 - 面向数据库的API，供厂商开发数据库的驱动程序
 
-![javaweb03](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/javaweb03.svg)
+![javaweb03](/Users/anasiangangster/Desktop/Java培训/楠哥./picture//javaweb03.svg)
 
 JDBC API
 

@@ -206,7 +206,7 @@ ArrayList和LinkedList区别：内存中储存的形式不同，ArrayList采用�
 - 链表在内存中是不连续的，没有固定的公式可以使用，要读取只能从第一位开始一直遍历到目标元素，数据规模越大，操作越慢。
 - 增删快，因为只需要从新设置目标元素前后两个节点的后置指针即可，与数据规模无关。
 
-![集合](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/集合.svg)
+![集合](./picture/集合.svg)
 
 ```java
 import java.util.LinkedList;

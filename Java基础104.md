@@ -64,9 +64,9 @@ Java通过String类来创建和操作字符串数据。
 
      1、2在内存存储方式不一样
 
-![String01](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/String01.svg)
+![String01](./picture/String01.svg)
 
-![String02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/String02.svg)
+![String02](./picture/String02.svg)
 
 三目运算符
 
@@ -107,7 +107,7 @@ Java通过String类来创建和操作字符串数据。
 - null是指对象不存在，引用地址为空
 - 空是指对象存在，没有内容，长度为零
 
-<img src="/Users/anasiangangster/Desktop/Java培训/楠哥/picture/String03.svg" alt="String03" style="zoom:200%;" />
+<img src="./picture/String03.svg" alt="String03" style="zoom:200%;" />
 
 # StringBuffer
 
@@ -115,7 +115,7 @@ String对象一旦创建，值不能修改（原来的值不能修改，一旦�
 
 修改之后会重新开辟内存空间来存储新的对象，会修改String的引用。
 
-![String04](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/String04.svg)
+![String04](./picture/String04.svg)
 
 String的值为什么不能修改？修改之后会创建一个新的对象？而不是在原有对象的基础上进行修改？
 
@@ -387,7 +387,7 @@ InputStream（字节输入流），Reader（字符输入流）
 
 InputStreamReader的功能是将字节输入流转换为字符输入流
 
-![IOStream01](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/IOStream01.svg)
+![IOStream01](./picture/IOStream01.svg)
 
 英文、数组、符号
 
@@ -452,7 +452,7 @@ OutputStreamWriter 处理流
 
 OutputStreamWriter的功能是将输出字节流转成输出字符流，与InputStreamReader向对应的，将输入字节流转成输入字符流。
 
-![IOStream02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/IOStream02.svg)
+![IOStream02](./picture/IOStream02.svg)
 
 ```java
 import java.io.FileWriter;

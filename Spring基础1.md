@@ -25,7 +25,7 @@ Spring概述
 - Spring提供了各个层面的解决方案，Spring MVC、Spring Data、Spring Cloud
 - Spring两大核心机制IoC（控制反转）、AOP（面向切面）
 
-![spring-overview](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/spring-overview.png)
+![spring-overview](./picture/spring-overview.png)
 
 Spring优点
 
@@ -48,7 +48,7 @@ Spring核心技术
 
 但在Spring框架中创建对象的工作不再由调用者来完成，而是交给IoC容器来创建，再推送给调用者，整个流程完成反转，所以是控制反转 
 
-![SpringBeginner1](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/SpringBeginner1.svg)
+![SpringBeginner1](./picture/SpringBeginner1.svg)
 
 ### 如何使用IoC
 
@@ -569,7 +569,7 @@ AOP优点
 - 非业务代码更加集中，不分散，便于统一管理
 - 业务代码更简洁存粹，没有其他代码的影响
 
-![aop](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/aop.gif)
+![aop](./picture/aop.gif)
 
 - 将复杂的需求分解成不同的方面，将散布在系统中的公共功能集中解决
 

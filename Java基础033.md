@@ -42,11 +42,11 @@
 
 系统会为每个线程分配CPU资源，在某个具体的时间段内CPU资源会被一个线程占用，在不同的时间段内由不同的线程来占用CPU资源，**所以多个线程还是在交替执行，只不过因为CPU运行速度太快，我们感觉是在同时执行**
 
-![Threading01](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading01.svg)
+![Threading01](./picture/Threading01.svg)
 
 整个程序如果是一条回路，说明程序只有一个线程
 
-![Threading02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading02.svg)
+![Threading02](./picture/Threading02.svg)
 
 程序有两条回路，同时向下执行，这种情况就是多线程，两个线程同时在执行。
 
@@ -189,7 +189,7 @@ github：全球最大同性交友网站
 
   线程状态之间的转换图
 
-  ![Threading03](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading03.svg)
+  ![Threading03](./picture/Threading03.svg)
 
 ### Java多线程的实现
 
@@ -267,7 +267,7 @@ github：全球最大同性交友网站
 
   合并是指将指定的某个线程加入到当前线程中，合并为一个线程，由两个线程交替执行完成一个线程中的两个子线程 顺序执行。
 
-  ![Threading04](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading04.svg)
+  ![Threading04](./picture/Threading04.svg)
 
   通过调用join方法来实现合并，具体如何合并？
 

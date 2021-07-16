@@ -4,7 +4,7 @@ ForkJoin是JDK1.7后发布的多线程并发处理框架，功能上和JUC类似
 
 本质上是对线程池的一种补充，对线程池功能的一种扩展，基于线程池的。 它的核心思想就是将一个大型的任务拆分成很多个小任务，分别执行，最终将小任务的结果进行汇总，生成最终的结果。
 
-![Threading09](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading09.svg)
+![Threading09](./picture/Threading09.svg)
 
 本质就是把一个线程的任务拆分成多个小任务，然后由多个线程并发执行，最终将结果进行汇总。
 

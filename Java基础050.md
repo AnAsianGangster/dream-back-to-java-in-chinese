@@ -135,7 +135,7 @@ Runnable --> RunnableFuture --> FutureTask
 
 FutureTask是Runnable的实现类
 
-![Threading08](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/Threading08.svg)
+![Threading08](./picture/Threading08.svg)
 
 ```java
 import java.util.concurrent.Callable;

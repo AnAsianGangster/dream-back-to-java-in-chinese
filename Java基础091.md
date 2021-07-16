@@ -20,7 +20,7 @@ set.add(1)
 
 map.put("name", "aobo") 映射、键值对、key value
 
-![集合框架01](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/集合框架01.svg)
+![集合框架01](./picture/集合框架01.svg)
 
 ## Set
 
@@ -142,7 +142,7 @@ public boolean equals(Object obj) {
 
 但是每个类都可以对equals方法进行重写，覆盖掉之前使用==进行判断的逻辑，该用新的逻辑进行判断是否相等。
 
-![集合框架02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/集合框架02.svg)
+![集合框架02](./picture/集合框架02.svg)
 
 LinkedhashSet如何判断两个对象是否相等？
 

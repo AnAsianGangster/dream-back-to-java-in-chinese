@@ -22,9 +22,9 @@ web应用服务器：Tomcat、Jboss、Weblogic、Jetty
   
   work：存放Tomcat将JSP转换之后的Servlet文件
 
-![tomcatIDEA开始](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/tomcatIDEA开始.png)
+![tomcatIDEA开始](./picture/tomcatIDEA开始.png)
 
-![tomcatIDEA开始02](/Users/anasiangangster/Desktop/Java培训/楠哥/picture/tomcatIDEA开始02.png)
+![tomcatIDEA开始02](./picture/tomcatIDEA开始02.png)
 
 ## Servlet
 
