@@ -528,3 +528,153 @@ public String list(UserList userList) {
 
 - Map
 
+自定义封装类
+
+```java
+package com.anasiangangster.entity;
+
+import lombok.Data;
+
+import java.util.Map;
+
+@Data
+public class UserMap {
+  private Map<String, User> users;
+}
+```
+
+业务方法
+
+```java
+@RequestMapping("/map")
+public String map(UserMap userMap) {
+  StringBuffer str = new StringBuffer();
+  for(String key: userMap.getUsers().keySet()) {
+    User user = userMap.getUsers().get(key);
+    str.append(user);
+  }
+  return str.toString();
+}
+```
+
+jsp
+
+```html
+<form action="/data/map" method="post">
+  用户1编号：<input type="text" name="users['a'].id">
+  用户1名称：<input type="text" name="users['a'].name">
+  用户2编号：<input type="text" name="users['b'].id">
+  用户2名称：<input type="text" name="users['b'].name">
+  用户3编号：<input type="text" name="users['c'].id">
+  用户3名称：<input type="text" name="users['c'].name">
+  <input type="submit" value="提交">
+</form>
+```
+
+- JSON
+
+客户端发送JSON格式的数据，直接通过Spring MVC绑定到业务方法的形参中。
+
+处理Spring MVC无法加载静态资源，在web.xml中添加配置即可。
+
+```xml
+<!-- 加载jQuery静态资源，静态资源不要交给dispatcherServlet处理 -->
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.js</url-pattern>
+</servlet-mapping>
+```
+
+jsp
+
+```html
+<%--
+  Created by IntelliJ IDEA.
+  User: anasiangangster
+  Date: 20/7/21
+  Time: 2:28 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>json</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            var user = {
+                "id":1,
+                "name":"奥博",
+            };
+            $.ajax({
+                url:"/data/json",
+                data:JSON.stringify(user),
+                type:"post",
+                contentType:"application/json;charset=UTF-8",
+                dataType:"json",
+                success:function(data){
+                    alert(data.id+"--"+data.name);
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+业务方法
+
+```java
+@RequestMapping("/json")
+public User json(@RequestBody User user){
+  System.out.println(user);
+  user.setId(6);
+  user.setName("总榜");
+  return user;
+}
+```
+
+Spring MVC 中的JSON和JavaBean的转换需要借助于fastjson，pom.xml引入相关依赖
+
+```xml
+<dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>fastjson</artifactId>
+  <version>1.2.69</version>
+</dependency>
+```
+
+Springmvc.xml添加fastjson配置。
+
+```xml
+<mvc:annotation-driven>
+  <!-- 消息转换器 -->
+  <mvc:message-converters register-defaults="true">
+    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+      <property name="supportedMediaTypes" value="text/html;charset=UTF-8"></property>
+    </bean>
+    <!-- 配置fastjson -->
+    <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter"></bean>
+  </mvc:message-converters>
+</mvc:annotation-driven>
+```
+
+### Spring MVC模型数据解析
+
+JSP四大作用域对应的内置对象：pageContext、request、session、application。
+
+模型数据的绑定是由VIewResolver来完成的，实际开发中，我们需要先添加模型数据，再交给ViewResolver来绑定。
+
+Spring MVC提供了一下几种方式添加模型数据
+
+- Map
+- Model
+- ModelAndView
+- @SessionAttribute
+- @ModelAttribute
+
+1. Map
+
