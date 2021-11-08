@@ -678,3 +678,55 @@ Spring MVC提供了一下几种方式添加模型数据
 
 1. Map
 
+```java
+@Controller
+@RequestMapping("/view")
+public class ViewHandler {
+  @RequestMapping("/map")
+  public String map(Map<String, User> map){
+    User user = new User();
+    user.setId(1L);
+    user.setName("张三");
+    map.put("user", user); // 模型数据
+    return "view"; // 视图
+  }
+}
+```
+
+JSP
+
+```jsp
+<%--
+  Created by IntelliJ IDEA.
+  User: anasiangangster
+  Date: 23/7/21
+  Time: 10:17 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<html>
+<head>
+    <title>view</title>
+</head>
+<body>
+    ${requestScope.user}
+</body>
+</html>
+```
+
+2. Model
+
+```java
+@RequestMapping("/model")
+public String model(Model model){
+  User user = new User();
+  user.setId(1L);
+  user.setName("张三");
+  model.addAttribute("user", user);
+  return "view";
+}
+```
+
+3. ModelAndView
+
